@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personagem Ficha</title>
+
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <form class="ficha">
+        
+        <header class="topo">
+            <label for="Personagem"> Nome da Personagem
+                    <input type="text" id="Personagem" name="personagem"></label>
+                <label for="jogador"> Nome da jogadora
+                    <input type="text" id="jogador" name="jogador"></label>
+            
+            <br><label for="xp"> Pontos
+                <br><input type="number" id="xp" name="xp" min="0"></label><br>
+            <br>
+
+            <br><label for="raça"> raça
+                <br><input type="text" id="raça" name="raça"></label><br>
+            <br>
+
+            <br><label for="classe">Classe
+                <br><input type="text" id="classe" name="classe"></label><br>
+            <br>
+        </header>
+
+        <main>
+            <section class="principal">
+                <fieldset class="atributos">
+                <br>
+                    <legend>atributos</legend>
+                    <br><label for="força">FOR
+                       <br> <input type="number" id="força" name="força" min="1" max="600"></label><br>
+                    <br>
+                    <label for="destreza">DES
+                        <br><input type="number" id="destreza" name="destreza" min="1" max="80"></label><br>
+                    <label for="inteligencia">INT
+                       <br> <input type="number" id="sabedoria" name="sabedoria" min="1" max="500"></label><br>
+                    <br>
+
+                <div>
+                    <img src="" alt="Ilustração">
+                </div>
+
+                </fieldset>
+            </section>
+        </main>
+
+        <footer>
+            <section class="secundario">
+                <div class="textolongo">
+                    <label for="caracteristicas">caracteristicas </label>
+                    <textarea id="caracteristicas" name="caracteristicas"></textarea>
+                </div>
+            </section>
+        </footer>
+    </form>
+ 
+    
+</body>
+</html>
