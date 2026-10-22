@@ -1,0 +1,318 @@
+:root {
+    --vinho: #541c36;
+    --rosa: #c95c83;
+    --rosa-claro: #f3c5d5;
+    --cinza: #d6d0d2;
+    --cinza-escuro: #292329;
+    --preto: #171419;
+    --branco: #fff8f5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 16px;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    color: var(--branco);
+
+    background:
+        radial-gradient(circle at top, #7b3b60, transparent 55%),
+        var(--preto);
+}
+
+/* FICHA */
+.ficha {
+    width: 100%;
+    max-width: 1050px;
+    margin: auto;
+    overflow: hidden;
+
+    background: var(--cinza-escuro);
+    border: 4px solid var(--rosa);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px #0008;
+}
+
+/* CABEÇALHO */
+.topo {
+    padding: 28px;
+    background: var(--vinho);
+    border-bottom: 5px solid var(--rosa);
+}
+
+.titulo {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.subtitulo {
+    color: var(--rosa-claro);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+h1 {
+    margin: 12px 0;
+    font-size: clamp(26px, 5vw, 42px);
+    text-transform: uppercase;
+    text-shadow: 3px 3px 0 var(--preto);
+}
+
+.titulo p:last-child {
+    color: var(--cinza);
+}
+
+/* CAMPOS */
+.identificacao {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    color: var(--rosa-claro);
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+input,
+textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 11px;
+
+    color: var(--preto);
+    background: var(--cinza);
+    border: 2px solid transparent;
+    border-radius: 5px;
+
+    font: inherit;
+    font-weight: normal;
+    text-transform: none;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--rosa);
+    border-color: var(--branco);
+}
+
+textarea {
+    resize: vertical;
+    line-height: 1.5;
+}
+
+.conteudo {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 22px;
+    padding: 24px;
+    align-items: start;
+}
+
+h2 {
+    margin: 0 0 20px;
+    padding-bottom: 10px;
+
+    color: var(--rosa-claro);
+    font-size: 17px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    border-bottom: 2px solid var(--rosa);
+}
+
+.painel,
+.ilustracao {
+    min-width: 0;
+    padding: 20px;
+    background: var(--preto);
+    border: 1px solid #704258;
+    border-radius: 8px;
+}
+
+.ilustracao {
+    grid-row: span 2;
+}
+
+.imagem-personagem {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 320px;
+    margin-bottom: 22px;
+    padding: 12px;
+
+    background: linear-gradient(145deg, #782f51, #28202c);
+    border: 3px solid var(--rosa);
+    border-radius: 6px;
+}
+
+.imagem-personagem img {
+    display: block;
+    width: 100%;
+    max-height: 420px;
+    object-fit: contain;
+}
+
+.selo {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+
+    padding: 6px 9px;
+    color: var(--branco);
+    background: var(--vinho);
+    border: 1px solid var(--rosa);
+
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+/* ATRIBUTOS */
+.grade-atributos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 28px;
+}
+
+.grade-atributos label {
+    align-items: center;
+    padding: 12px 6px;
+    background: var(--vinho);
+    border: 1px solid var(--rosa);
+    border-radius: 6px;
+}
+
+.grade-atributos input {
+    padding: 9px 3px;
+    text-align: center;
+}
+
+.grade-combate {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+/* DESCRIÇÃO E HABILIDADES */
+.descricao,
+.habilidades {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.descricao h2,
+.habilidades h2 {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+/* RODAPÉ */
+.rodape {
+    padding: 18px;
+    text-align: center;
+    color: var(--rosa-claro);
+    background: var(--vinho);
+    border-top: 4px solid var(--rosa);
+
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+/* TELAS MENORES */
+@media (max-width: 700px) {
+    body {
+        padding: 12px 8px;
+    }
+
+    .topo,
+    .conteudo {
+        padding: 16px;
+    }
+
+    .conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .ilustracao {
+        grid-row: auto;
+    }
+
+    .identificacao {
+        grid-template-columns: 1fr;
+    }
+
+    .grade-atributos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .imagem-personagem {
+        min-height: 250px;
+    }
+}
+
+/* autocomplet input */
+input:autofill {
+  outline: 5px solid magenta;
+  border: 3px dashed yellow;
+}
+
+/*bloco de botao*/
+custom-element:not(:defined) {
+  border-color: grey;
+  color: grey;
+}
+
+custom-element:defined {
+  background-color: wheat;
+  border-color: black;
+  color: black;
+}
+
+/* show loading message */
+custom-element:not(:defined)::before {
+  content: "Loading...";
+  position: absolute;
+  inset: 0;
+  align-content: center;
+  text-align: center;
+  font-size: 2rem;
+  background-color: white;
+  border-radius: 1rem;
+}
+
+/* remove the loading message */
+custom-element:defined::before {
+  content: "";
+}
+
+
+/*hover*/
+.joinBtn {
+  width: 10em;
+  height: 5ex;
+  background-color: gold;
+  border: 2px solid firebrick;
+  border-radius: 10px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+}
+
+.joinBtn:hover {
+  background-color: bisque;
+}
