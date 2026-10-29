@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personagem Ficha</title>
+
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <form class="ficha">
+        
+
+        <header class="topo">
+          <div class="titulo">
+                <p class="subtitulo">SKULLGIRLS • CHARACTER FILE</p>
+                <h1>Ficha de Personagem</h1>
+                <p>Arquivo de combate — Registro de personagem</p>
+            </div>
+
+            <div class="identificacao">
+                <label for="personagem">Nome da personagem
+                    <input type="text" id="personagem" name="personagem"
+                        value="Peacock">
+                </label>
+
+                <label for="jogador">Nome da jogadora
+                    <input type="text" id="jogador" name="jogador">
+                </label>
+
+                <label for="xp">Pontos / XP
+                    <input type="number" id="xp" name="xp" min="0">
+                </label>
+
+                <label for="raca">Raça / Espécie
+                    <input type="text" id="raca" name="raca">
+                </label>
+
+                <label for="classe">Classe / Arquétipo
+                    <input type="text" id="classe" name="classe">
+                </label>
+            </div>
+        </header>  
+
+        <main>
+            <div class="container2">
+            <label for="Personagem"> <span style="font-size: smaller;">Nome da Personagem</span>
+                <div><input type="text" id="Personagem" name="personagem"></div></label>
+                <label for="jogador"> Nome da jogadora
+                <div><input type="text" id="jogador" name="jogador">
+            </div>
+            </label>
+            <label for="xp"> Pontos
+               <div><input type="number" id="xp" name="xp" min="0" ></div></label>
+
+            <label for="raça"> raça
+                <div><input type="text" id="raça" name="raça" autocomplete="additional-name"></div></label>
+
+            <label for="classe">Classe
+               <div><input type="text" id="classe" name="classe"></div></label>
+            
+            <section class="principal">
+                <fieldset class="atributos">
+                <br>
+                    <legend>atributos</legend>
+                    <label for="força"></label>
+                       <input type="number" id="força" name="força" min="1" max="600"></label>
+     
+
+            <!-- ILUSTRAÇÃO -->
+            <section class="ilustracao">
+                <h2>01 — Arquivo visual</h2>
+
+                <div class="imagem-personagem">
+                    <img src="imagens/peacock.png"
+                        alt="Ilustração da personagem Peacock">
+
+                    <span class="selo">SUBJECT: PEACOCK</span>
+                </div>
+
+                <label for="apelido">Codinome / Apelido
+                    <input type="text" id="apelido" name="apelido">
+                </label>
+
+                <label for="alinhamento">Alinhamento / Personalidade
+                    <input type="text" id="alinhamento" name="alinhamento">
+                </label>
+            </section>
+
+            <!-- ATRIBUTOS -->
+            <section class="painel atributos">
+                <h2>02 — Atributos</h2>
+
+                <div class="container3">
+                    <label for="forca">FOR
+                       <div><input type="number" id="forca" name="forca" min="0"></div>
+                    </label>
+
+                    <label for="destreza">DES
+                        <div><input type="number" id="destreza" name="destreza" min="0"></div>
+                    </label>
+
+                    <label for="inteligencia">INT
+                       <div><input type="number" id="inteligencia" name="inteligencia" min="0"></div>
+                    </label>
+
+                    <label for="vitalidade">VIT
+                        <div><input type="number" id="vitalidade" name="vitalidade" min="0"></div>
+                    </label>
+
+                    <label for="carisma">CAR
+                        <div><input type="number" id="carisma" name="carisma" min="0"></div>
+                    </label>
+
+                    <label for="sorte">SOR
+                       <div><input type="number" id="sorte" name="sorte" min="0"></div>
+                    </label>
+                </div>
+
+                </fieldset>
+            </section>
+        </main>
+                <h2>03 — Combate</h2>
+
+                <div class="container">
+                    <label for="vida">Pontos de vida
+                    <div><input type="number" id="vida" name="vida" min="0"></div>
+                    </label>
+
+                    <label for="energia">Energia
+                       <div><input type="number" id="energia" name="energia" min="0"></div> 
+                    </label>
+
+                    <label for="defesa">Defesa
+                       <div> <input type="number" id="defesa" name="defesa" min="0"></div>
+                    </label>
+
+        <footer>
+            <section class="secundario">
+                    <label for="caracteristicas">caracteristicas </label>
+                    <textarea id="caracteristicas" name="caracteristicas"></textarea>
+                    <label for="iniciativa">Iniciativa
+                        <input type="number" id="iniciativa" name="iniciativa">
+                    </label>
+                </div>
+            </section>
+
+            <!-- DESCRIÇÃO -->
+            <section class="painel descricao">
+                <h2>04 — Características</h2>
+
+                <label for="aparencia">Aparência física
+                    <textarea id="aparencia" name="aparencia"
+                        rows="3"></textarea>
+                </label>
+
+                <label for="personalidade">Personalidade
+                    <textarea id="personalidade" name="personalidade"
+                        rows="3"></textarea>
+                </label>
+
+                <label for="historia">História da personagem
+                    <textarea id="historia" name="historia"
+                        rows="5"></textarea>
+                </label>
+            </section>
+
+            <!-- HABILIDADES -->
+            <section class="painel habilidades">
+                <h2>05 — Habilidades e equipamentos</h2>
+
+                <label for="habilidades">Habilidades especiais
+                    <textarea id="habilidades" name="habilidades"
+                        rows="4"></textarea>
+                </label>
+
+                <label for="equipamentos">Armas e equipamentos
+                    <textarea id="equipamentos" name="equipamentos"
+                        rows="3"></textarea>
+                </label>
+
+                <label for="observacoes">Observações
+                       <textarea id="observacoes" name="observacoes"
+                        rows="3"></textarea>
+                </label>
+            </section>
+
+        </main>
+
+        <footer class="rodape">
+            <h1>END OF FILE — SKULLGIRLS CHARACTER ARCHIVE</h1>
+            <p>CHECK THE OPTIONS FOR MORE CHARACTERS INFOS</p>
+         <label>
+        <input name="newsletter" type="checkbox" checked /> I want to subscribe to a
+  personalized newsletter.
+        </label>
+        <label>
+         <input name="privacy" type="checkbox" required /> I have read and I agree to
+  the Privacy Policy (required).
+
+
+    <a href="confirmar.html">Confirm>
+    <button class="joinBtn">Confirm</button>
+            </a>
+        </label>
+        </footer>
+
+    </form>
+ 
+    
+
+</body>
+</html>
